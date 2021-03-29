@@ -1,12 +1,25 @@
 import React, { Fragment } from 'react';
 import BlogListItem from './BlogListItem';
+import { Link } from 'react-router-dom';
+
+
+
 
 const BlogList = () => {
+
+
     return (
         <Fragment>
-            <div className="AddBlog">
-                <i className="fas fa-plus AddItem"></i>
+       <Link to="/admin/blog/add">
+
+     <div className="AddBlog"  >
+          
+                    <i className="fas fa-plus AddItem"></i>
+               
             </div>
+
+                
+       </Link>
 
 
             <BlogListItem />
