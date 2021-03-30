@@ -1,12 +1,43 @@
-import React, { Fragment } from 'react';
+import React, { Fragment,useEffect,useState } from 'react';
 import BlogListItem from './BlogListItem';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+
+const url="http://localhost:8000"
 
 
 
+const BlogList = () =>
+{
+    
+    const [ getallblog, setallblog ] = useState( [] )
 
-const BlogList = () => {
+    const getallblogapi=() =>
+    {
+        
+        axios.get( url + "/api/blog" ).then( ( {data} ) =>
+        {
+            setallblog( data )
+            
+            
+        } )
+            .catch( ex =>
+            {
+                
+                console.log( ex );
+            } );
 
+
+    }
+    
+    
+   
+    useEffect( () =>
+    {
+        getallblogapi()
+        console.log(getallblog);
+        
+    }, [] );
 
     return (
         <Fragment>
@@ -20,9 +51,13 @@ const BlogList = () => {
 
                 
        </Link>
-
-
-            <BlogListItem />
+   
+     
+       
+           
+                <BlogListItem />
+    
+          
 
         </Fragment>
     );
