@@ -1,16 +1,21 @@
 import React, { Fragment } from 'react';
 import UserListItem from './UserListItem';
+import { Link } from 'react-router-dom';
 
 const UserList = () => {
-    return (
 
+    return (
         <Fragment>
 
-            <div className="AddBlog">
-                <i className="fas fa-plus AddItem"/>
-            </div>
+            <Link to="/admin/user/add">
+                <div className="AddUser">
+                    <i className="fas fa-plus AddItem" />
+                </div>
+            </Link>
+
 
             <UserListItem />
+
         </Fragment>
     );
 }

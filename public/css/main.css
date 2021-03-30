@@ -95,6 +95,27 @@
   cursor: pointer;
 }
 
+
+.AddUser {
+  color: #2f91e0;
+  font-size: 20px;
+  width: 6%;
+  height: 9%;
+  text-align: center;
+  border: #ffffff solid 2px;
+  border-bottom-left-radius: 17px;
+  border-bottom-right-radius: 17px;
+  margin-right: 80%;
+  background-color: #ffffff;
+  opacity: 70%;
+}
+
+.AddUser:hover {
+  background-color: #0a304e;
+  cursor: pointer;
+}
+
+
 .AddItem {
   margin-top: 30%;
 }
@@ -215,8 +236,8 @@
 
 
 .ck-editor__editable {
-    min-height: 400px;
-    max-height: 400px;
+    min-height: 350px;
+    max-height: 350px;
 }
 
 
@@ -234,7 +255,7 @@
   height: 6%;
   border-radius: 40px;
   background-color: rgb(233, 228, 228);
-  margin-top: 3%;
+  margin-top: 7%;
   margin-left: 10%;
 }
 
@@ -335,7 +356,7 @@
   margin-right: 3%;
 }
 
-/* -------------- */
+/* --------------------------------------------------------------------------------------------------- */
 
 .SliderHome {
   width: 100%;

@@ -2,7 +2,7 @@ import React, { Fragment, Component } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
-const AddBlog = () => {
+const EditBlog = () => {
     return (
 
         <Fragment>
@@ -18,9 +18,9 @@ const AddBlog = () => {
 
 
                     <div className="ContentAddBlogCustom">
+
                         <div>
                             <input type="text" className="InputDivAddBlog" />
-
                         </div>
 
 
@@ -33,14 +33,17 @@ const AddBlog = () => {
                             </ul>
                         </div>
 
+
                     </div>
                 </div>
 
 
 
 
+
                 <div className="ContentAddBlog col col-lg-9">
                     <input type="text" className="TitleInputAddBlog" />
+                    <input type="text" className="SlugInputAddBlog" />
 
                     <div className="EditorAddBlog">
                         <div id="editor">
@@ -68,6 +71,7 @@ const AddBlog = () => {
 
                                 config={{
                                     ckfinder: {
+
                                         uploadUrl: '/img'
                                     }
                                 }}
@@ -91,4 +95,4 @@ const AddBlog = () => {
     );
 }
 
-export default AddBlog;
+export default EditBlog;

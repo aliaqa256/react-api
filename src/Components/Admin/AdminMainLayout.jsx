@@ -4,6 +4,9 @@ import AdminPanel from './Panel/AdminPanel';
 import UserList from './User/UserList';
 import { Switch, Route } from 'react-router-dom';
 import AddBlog from './Blog/AddBlog';
+import EditUser from './User/EditUser';
+import AddUser from './User/AddUser';
+import EditBlog from './Blog/EditBlog';
 
 
 
@@ -19,8 +22,11 @@ const AdminMainLayout = () => {
 
                         <Switch>
                             <Route exact path="/admin/blog" component={BlogList} />
-                            <Route path="/admin/User" component={UserList} />
+                            <Route exact path="/admin/User" component={UserList} />
                             <Route path="/admin/blog/add" component={AddBlog} />
+                            <Route path="/admin/blog/edit" component={EditBlog} />
+                            <Route path="/admin/user/add" component={AddUser} />
+                            <Route path="/admin/user/edit" component={EditUser} />
                         </Switch>
 
 
